@@ -19,8 +19,10 @@ class ViewController: UIViewController {
         button.backgroundColor = .systemBlue
         button.setTitle("Tap Here", for: .normal)
         button.center = view.center
-        button.setTitleColor(.white, for: .normalr)
+        button.setTitleColor(.white, for: .normal)
     }
+    
+    
 
 }
 
