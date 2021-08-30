@@ -24,6 +24,7 @@
 		4AE0BF0126DA703C001FA3FF /* SwiftDIUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE0BEF126DA703B001FA3FF /* SwiftDIUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AE0BF0426DA703C001FA3FF /* SwiftDIUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE0BEEF26DA703B001FA3FF /* SwiftDIUIKit.framework */; };
 		4AE0BF0526DA703C001FA3FF /* SwiftDIUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE0BEEF26DA703B001FA3FF /* SwiftDIUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AE0BF0D26DA7094001FA3FF /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF0C26DA7094001FA3FF /* CoursesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		4AE0BEF726DA703C001FA3FF /* SwiftDIUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDIUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE0BEFE26DA703C001FA3FF /* SwiftDIUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDIUIKitTests.swift; sourceTree = "<group>"; };
 		4AE0BF0026DA703C001FA3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AE0BF0C26DA7094001FA3FF /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			children = (
 				4AE0BEF126DA703B001FA3FF /* SwiftDIUIKit.h */,
 				4AE0BEF226DA703B001FA3FF /* Info.plist */,
+				4AE0BF0C26DA7094001FA3FF /* CoursesViewController.swift */,
 			);
 			path = SwiftDIUIKit;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 					};
 					4AE0BEEE26DA703B001FA3FF = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					4AE0BEF626DA703C001FA3FF = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -467,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE0BF0D26DA7094001FA3FF /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +790,7 @@
 		4AE0BF0726DA703C001FA3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -801,6 +807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yarapps.SwiftDIUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -811,6 +818,7 @@
 		4AE0BF0826DA703C001FA3FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

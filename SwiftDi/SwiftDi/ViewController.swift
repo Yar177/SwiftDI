@@ -6,6 +6,12 @@
 //
 
 import UIKit
+import SwiftDIUIKit
+import APIKit
+
+
+extension APICaller: DataFetchable{}
+
 
 class ViewController: UIViewController {
 
@@ -20,8 +26,14 @@ class ViewController: UIViewController {
         button.setTitle("Tap Here", for: .normal)
         button.center = view.center
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(onButtonClickEvent), for: .touchUpInside)
     }
     
+    
+    @objc private func onButtonClickEvent(){
+        let courseVc = CoursesViewController(dataFetchable: APICaller.shared)
+        present(courseVc, animated: true, completion: nil)
+    }
     
 
 }
