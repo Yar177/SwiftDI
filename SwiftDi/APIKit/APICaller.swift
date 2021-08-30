@@ -28,14 +28,13 @@ public class APICaller{
             }
             //decode json
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:String]] else{
+                guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [[String:String]] else {
                     completion([])
                     return
                 }
-                let names:[String] = json?.compactMap({ $0["name"]})
-                print(names)
+                let names:[String] = json.compactMap({ $0["name"]})
                 completion(names)
-                print(json?.count)
+
             }catch{
                 completion([])
             }

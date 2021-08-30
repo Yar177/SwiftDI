@@ -10,9 +10,26 @@ public protocol DataFetchable{
     func fetchCourseNames(completion: @escaping ([String]) -> Void)
 }
 
-public class CoursesViewController: UIViewController {
+struct Course{
+    let name:String
+}
+
+public class CoursesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tableView.frame = view.bounds
+    }
+    
     
     let dataFetchable: DataFetchable
+    
+    private let tableView: UITableView = {
+        let tabele = UITableView()
+        tabele.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tabele
+    }()
     
     public init(dataFetchable: DataFetchable) {
         self.dataFetchable = dataFetchable
@@ -23,26 +40,31 @@ public class CoursesViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var courses:[Course] = []
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        tableView.dataSource = self
+        tableView.delegate = self
+        view.backgroundColor = .systemBackground
         
-        dataFetchable.fetchCourseNames { courses in
-            print(courses)
+        dataFetchable.fetchCourseNames { [weak self] names in
+            self?.courses = names.map {Course(name: $0)}
+            print(self?.courses)
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return courses.count == 0 ?  3 : courses.count
     }
-    */
-
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = courses[indexPath.row].name
+        return cell
+    }
 }
