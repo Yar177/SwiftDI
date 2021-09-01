@@ -22,7 +22,10 @@ struct UpdatedButton: View {
                     
                     RoundedRectangle(cornerRadius: 16, style: .continuous)
                         .fill(
-                            LinearGradient(gradient: Gradient(colors: [ Color(#colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1)), Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                            LinearGradient(gradient: Gradient(colors:
+                                                                [ Color(#colorLiteral(red: 0.7608050108, green: 0.8164883852, blue: 0.9259157777, alpha: 1)), Color.white]),
+                                           startPoint: .topLeading,
+                                           endPoint: .bottomTrailing)
                         )
                         //       .foregroundColor(Color(#colorLiteral(red: 0.8060724139, green: 0.863902986, blue: 0.9824454188, alpha: 1)))
                         .padding(2)
