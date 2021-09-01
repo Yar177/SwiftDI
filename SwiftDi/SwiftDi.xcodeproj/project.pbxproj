@@ -26,6 +26,8 @@
 		4AE0BF0526DA703C001FA3FF /* SwiftDIUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE0BEEF26DA703B001FA3FF /* SwiftDIUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AE0BF0D26DA7094001FA3FF /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF0C26DA7094001FA3FF /* CoursesViewController.swift */; };
 		4AE0BF0F26DD4689001FA3FF /* ButtonsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF0E26DD4689001FA3FF /* ButtonsSwiftUIView.swift */; };
+		4AE0BF1126DD4FD1001FA3FF /* UpdatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF1026DD4FD1001FA3FF /* UpdatedButton.swift */; };
+		4AE0BF1326DD51D3001FA3FF /* UpgradedUiButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF1226DD51D3001FA3FF /* UpgradedUiButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		4AE0BF0026DA703C001FA3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE0BF0C26DA7094001FA3FF /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		4AE0BF0E26DD4689001FA3FF /* ButtonsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsSwiftUIView.swift; sourceTree = "<group>"; };
+		4AE0BF1026DD4FD1001FA3FF /* UpdatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedButton.swift; sourceTree = "<group>"; };
+		4AE0BF1226DD51D3001FA3FF /* UpgradedUiButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradedUiButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 				4AE0BEBC26DA6847001FA3FF /* LaunchScreen.storyboard */,
 				4AE0BEBF26DA6847001FA3FF /* Info.plist */,
 				4AE0BF0E26DD4689001FA3FF /* ButtonsSwiftUIView.swift */,
+				4AE0BF1026DD4FD1001FA3FF /* UpdatedButton.swift */,
+				4AE0BF1226DD51D3001FA3FF /* UpgradedUiButton.swift */,
 			);
 			path = SwiftDi;
 			sourceTree = "<group>";
@@ -451,7 +457,9 @@
 				4AE0BEB626DA6843001FA3FF /* ViewController.swift in Sources */,
 				4AE0BEB226DA6843001FA3FF /* AppDelegate.swift in Sources */,
 				4AE0BF0F26DD4689001FA3FF /* ButtonsSwiftUIView.swift in Sources */,
+				4AE0BF1326DD51D3001FA3FF /* UpgradedUiButton.swift in Sources */,
 				4AE0BEB426DA6843001FA3FF /* SceneDelegate.swift in Sources */,
+				4AE0BF1126DD4FD1001FA3FF /* UpdatedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

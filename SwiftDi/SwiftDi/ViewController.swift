@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //"https://iosacademy.io/api/v1/courses/index.php"
+        let btn  = UpdatedButton()
         
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 250, height: 50))
         view.addSubview(button)
